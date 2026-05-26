@@ -153,7 +153,7 @@ public class StreamApiTasks {
                 .collect(Collectors.toMap(
                         Map.Entry::getKey,
                         Map.Entry::getValue,
-                        (a, b) -> a,
+                        (oldValue, newValue) -> oldValue,
                         LinkedHashMap::new
                 ));
     }
